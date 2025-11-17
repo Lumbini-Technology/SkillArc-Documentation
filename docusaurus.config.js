@@ -15,10 +15,10 @@ const config = {
   favicon: 'images/logo/logo.png',
 
   // Set the production url of your site here
-  url: 'https://wrteam-in.github.io', // Your GitHub Pages URL
-  baseUrl: '/eSchool-SaaS-Doc/', // The repository name, preceded by a slash
-  organizationName: 'WRTeam-in', // Your GitHub username
-  projectName: 'eSchool-SaaS-Doc', // Your repository name
+  url: 'https://lumbini-technology.github.io', // Your GitHub Pages URL
+  baseUrl: '/SkillArc-Documentation/', // The repository name, preceded by a slash
+  organizationName: 'Lumbini-Technology ', // Your GitHub username
+  projectName: 'SkillArc-Documentation', // Your repository name
   trailingSlash: true,
   deploymentBranch: "gh-pages", // Deployment branch for GitHub Pages
   onBrokenLinks: 'throw',
@@ -131,7 +131,7 @@ const config = {
             position: "right",
           },
           {
-            href: 'https://www.wrteam.in/',
+            href: 'https://www.lumbinitechnologies.com/',
             label: 'WRTeam',
             position: 'right',
           },
@@ -139,7 +139,7 @@ const config = {
       },
       footer: {
         style: "dark",
-        copyright: `Copyright © ${new Date().getFullYear()} WRTeam. All rights reserved.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Lumbini Technologies. All rights reserved.`,
       },
       prism: {
         theme: prismThemes.github,

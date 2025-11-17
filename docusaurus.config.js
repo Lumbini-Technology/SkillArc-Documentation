@@ -21,33 +21,22 @@ const config = {
   projectName: 'SkillArc-Documentation', // Your repository name
   trailingSlash: true,
   deploymentBranch: "gh-pages", // Deployment branch for GitHub Pages
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
 
-  // Add local search plugin with a unique ID to avoid conflicts
+  // Removed installation docs plugin
   plugins: [
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'installation',
-        path: 'installation', // Folder with markdown files
-        routeBasePath: 'installation', // URL path
-        sidebarPath: require.resolve('./installationSidebar.js'),
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
         id: 'schooladmin',
-        path: 'schooladmin', // Another folder
+        path: 'schooladmin',
         routeBasePath: 'schooladmin',
         sidebarPath: require.resolve('./schooladminSidebar.js'),
       },
@@ -56,7 +45,7 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'superadmin',
-        path: 'superadmin', // Another folder
+        path: 'superadmin',
         routeBasePath: 'superadmin',
         sidebarPath: require.resolve('./superadminSidebar.js'),
       },
@@ -75,7 +64,6 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: false,
         blog: false,
@@ -86,85 +74,74 @@ const config = {
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: 'images/logo/transparent_logo.svg',
-      navbar: {
-        title: 'SkillArc',
-        logo: {
-          alt: 'SkillArc SaaS Logo',
-          src: 'images/logo/transparent_logo.svg',
+  themeConfig: ({
+    image: 'images/logo/transparent_logo.svg',
+    navbar: {
+      title: 'SkillArc',
+      logo: {
+        alt: 'SkillArc SaaS Logo',
+        src: 'images/logo/transparent_logo.svg',
+      },
+      items: [
+        {
+          docsPluginId: 'superadmin',
+          type: 'docSidebar',
+          sidebarId: 'superadminSidebar',
+          position: 'left',
+          label: 'Super Admin',
         },
-        items: [
-          {
-            docsPluginId: 'installation',
-            type: 'docSidebar',
-            sidebarId: 'installationSidebar',
-            position: 'left',
-            label: 'Installation',
-          },
-          {
-            docsPluginId: 'superadmin',
-            type: 'docSidebar',
-            sidebarId: 'superadminSidebar',
-            position: 'left',
-            label: 'Super Admin',
-          },
-          {
-            docsPluginId: 'schooladmin',
-            type: 'docSidebar',
-            sidebarId: 'schooladminSidebar',
-            position: 'left',
-            label: 'School Admin',
-          },
-          {
-            docId: 'index',
-            docsPluginId: 'changelog',
-            type: 'doc',
-            position: 'left',
-            label: 'Changelog',
-          },
-          {
-            type: "search",
-            position: "right",
-          },
-          {
-            href: 'https://www.lumbinitechnologies.com/',
-            label: 'Lumbini Technologies',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: "dark",
-        copyright: `Copyright © ${new Date().getFullYear()} Lumbini Technologies. All rights reserved.`,
-      },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-      colorMode: {
-        defaultMode: "light",
-        disableSwitch: false,
-        respectPrefersColorScheme: true,
-      },
-    }),
+        {
+          docsPluginId: 'schooladmin',
+          type: 'docSidebar',
+          sidebarId: 'schooladminSidebar',
+          position: 'left',
+          label: 'School Admin',
+        },
+        {
+          docId: 'index',
+          docsPluginId: 'changelog',
+          type: 'doc',
+          position: 'left',
+          label: 'Changelog',
+        },
+        {
+          type: "search",
+          position: "right",
+        },
+        {
+          href: 'https://www.lumbinitechnologies.com/',
+          label: 'Lumbini Technologies',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: "dark",
+      copyright: `Copyright © ${new Date().getFullYear()} Lumbini Technologies. All rights reserved.`,
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+    colorMode: {
+      defaultMode: "light",
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+  }),
+
   themes: [
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
-
-      ({
+      {
         hashed: true,
-        docsRouteBasePath: ["installation", "superadmin", "schooladmin"],
-        docsDir: ["installation", "superadmin", "schooladmin"],
-        docsPluginIdForPreferredVersion: "installation",
-      }),
+        docsRouteBasePath: ["superadmin", "schooladmin"],
+        docsDir: ["superadmin", "schooladmin"],
+        docsPluginIdForPreferredVersion: "superadmin",
+      },
     ],
   ],
 
-  // Add Font Awesome for icons
   stylesheets: [
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css",
   ],

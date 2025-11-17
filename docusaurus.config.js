@@ -17,7 +17,7 @@ const config = {
   // Set the production url of your site here
   url: 'https://lumbini-technology.github.io', // Your GitHub Pages URL
   baseUrl: '/SkillArc-Documentation/', // The repository name, preceded by a slash
-  organizationName: 'Lumbini-Technology ', // Your GitHub username
+  organizationName: 'Lumbini-Technology', // Your GitHub username
   projectName: 'SkillArc-Documentation', // Your repository name
   trailingSlash: true,
   deploymentBranch: "gh-pages", // Deployment branch for GitHub Pages
@@ -132,7 +132,7 @@ const config = {
           },
           {
             href: 'https://www.lumbinitechnologies.com/',
-            label: 'WRTeam',
+            label: 'Lumbini Technologies',
             position: 'right',
           },
         ],

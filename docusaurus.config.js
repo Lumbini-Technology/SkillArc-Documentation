@@ -10,8 +10,8 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'eSchool SaaS Documentation',
-  tagline: 'Documentation for eSchool SaaS Installation, Setup and Usage',
+  title: 'SkillArc SaaS Documentation',
+  tagline: 'Documentation for SkillArc SaaS Installation, Setup and Usage',
   favicon: 'images/logo/logo.png',
 
   // Set the production url of your site here
@@ -92,9 +92,9 @@ const config = {
       // Replace with your project's social card
       image: 'images/logo/transparent_logo.svg',
       navbar: {
-        title: 'eSchool SaaS',
+        title: 'SkillArc',
         logo: {
-          alt: 'eSchool SaaS Logo',
+          alt: 'SkillArc SaaS Logo',
           src: 'images/logo/transparent_logo.svg',
         },
         items: [

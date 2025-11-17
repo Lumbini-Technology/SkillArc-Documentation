@@ -133,7 +133,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/installation/intro"
+            to="/superadmin/intro"
           >
             Get Started
           </Link>
@@ -147,9 +147,10 @@ function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
-          <div className="col col--4">
-            <div className="card margin-bottom--lg">
+        <div className={clsx("row", styles.featuresRow)}>
+          {/* Super Admin Card */}
+          <div className={clsx("col col--6", styles.featureCol)}>
+            <div className={clsx("card", "margin-bottom--lg", styles.featureCard)}>
               <div className="card__header">
                 <div className={styles.cardIcon}>
                   <svg
@@ -166,12 +167,12 @@ function HomepageFeatures() {
               </div>
               <div className="card__body">
                 <p>
-                  Explore all the powerful features available in the eSchool SaaS Super Admin Panel.
+                  Explore all the powerful features available in the SkillArc SaaS Super Admin Panel.
                 </p>
               </div>
               <div className="card__footer">
                 <Link
-                  className="button button--outline button--primary"
+                  className="button button--outline button--primary button--sm"
                   to="/superadmin/intro"
                 >
                   View Super Admin Features
@@ -179,8 +180,10 @@ function HomepageFeatures() {
               </div>
             </div>
           </div>
-          <div className="col col--4">
-            <div className="card margin-bottom--lg">
+
+          {/* School Admin Card */}
+          <div className={clsx("col col--6", styles.featureCol)}>
+            <div className={clsx("card", "margin-bottom--lg", styles.featureCard)}>
               <div className="card__header">
                 <div className={styles.cardIcon}>
                   <svg
@@ -188,8 +191,8 @@ function HomepageFeatures() {
                     width="38"
                     height="38"
                     viewBox="0 0 100 100"
-                    fill="currentColor">
-
+                    fill="currentColor"
+                  >
                     <path d="M68,49.1c0,1.1-0.9,2-2,2H47.4c-1.1,0-2-0.9-2-2v-3c0-1.1,0.9-2,2-2H66c1.1,0,2,0.9,2,2V49.1z" />
                     <path d="M39.4,49.1c0,1.1-0.9,2-2,2H34c-1.1,0-2-0.9-2-2v-3c0-1.1,0.9-2,2-2h3.4c1.1,0,2,0.9,2,2V49.1z" />
                     <path d="M73.8,20H26.2c-3.4,0-6.2,2.8-6.2,6.2v47.6c0,3.4,2.8,6.2,6.2,6.2h47.6c3.4,0,6.2-2.8,6.2-6.2V26.2
@@ -203,12 +206,12 @@ function HomepageFeatures() {
               </div>
               <div className="card__body">
                 <p>
-                  Discover the tools and functionalities available to School Admins in eSchool SaaS.
+                  Discover the tools and functionalities available to School Admins in SkillArc SaaS.
                 </p>
               </div>
               <div className="card__footer">
                 <Link
-                  className="button button--outline button--primary"
+                  className="button button--outline button--primary button--sm"
                   to="/schooladmin/intro"
                 >
                   View School Admin Features
@@ -221,6 +224,7 @@ function HomepageFeatures() {
     </section>
   );
 }
+
 
 
 
